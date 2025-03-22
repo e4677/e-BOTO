@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
+
+:root {
+    --clr-dark: #004581;
+    --clr-bg: #97CBDC;
+    --clr-light: #DDE8F0;
+}
+
+body {
+    background-color: var(--clr-bg);
+    margin: 0;
+    padding: 0;
+    font-family: "Lexend Exa", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+
+
+header {
+    width: 100%;
+    display: flex;
+    background-color: var(--clr-dark);
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 3%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+}
+
+
+h1 {
+    color: var(--clr-light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links a {
+    color: var(--clr-light);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+
+.container1 {
+    text-align: center;
+    margin-top: 50px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
+}
+
+
+.container1 h1 {
+    font-size: 50px;
+    color: var(--clr-dark);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.container1 button {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    font-size: 20px;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Lexend Exa", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 200px; 
+    text-align: center; 
+}
+
+
+
+.container2 {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+    padding-top: 20px; ;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; 
+}
+
+.backbutton {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    font-size: 20px;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Lexend Exa", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 200px; 
+    text-align: center; 
+}
+
+
+.container3 {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%; 
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+} 
+
+
+.proceed_voting {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    font-size: 20px;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Lexend Exa", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 200px;
+    text-align: center; 
+}
+
+.button2 {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    font-size: 20px;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Lexend Exa", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 200px; 
+    text-align: center; 
+}
+
+.button3 {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    font-size: 15px;
+    padding: 5px 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Lexend Exa", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100px; 
+    text-align: center; 
+}
+
+
+.table_container {
+    width: 90%; 
+    max-width: 800px; 
+    margin: 20px auto; 
+    overflow-x: auto; 
+    background-color: var(--clr-light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.voterinfo-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.voterinfo-table th {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+
+.voterinfo-table td {
+    color: var(--clr-dark);
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    text-align: left;
+}
+
+.container4 {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%; 
+    margin: 10px auto; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+} 
+
+.candidates {
+    color: var(--clr-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: var(--clr-light);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button4 {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    font-size: 20px;
+    padding: 7.5px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Lexend Exa", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 200px; 
+    text-align: center; 
+}
+
+.container5{
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%; 
+    margin: 20px auto; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}

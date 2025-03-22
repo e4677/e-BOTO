@@ -1,0 +1,12 @@
+[
+    {
+        "officerID": "OFC001",
+        "PIN": "1234",
+        "name": "John Doe"
+    },
+    {
+        "officerID": "OFC002",
+        "PIN": "5678",
+        "name": "Jane Smith"
+    }
+]
