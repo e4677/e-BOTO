@@ -46,32 +46,40 @@
     <script>
         document.addEventListener("DOMContentLoaded", async function() {
             let voterID = sessionStorage.getItem("voterID");
-
+    
             if (!voterID) {
                 alert("⚠️ No voter logged in! Redirecting to login...");
                 window.location.href = "voter.html"; 
                 return;
             }
-
+    
             try {
-                let response = await fetch(`http://127.0.0.1:5000/voter/${voterID}`);
-                let voter = await response.json();
-
-                if (response.ok) {
+                let voterResponse = await fetch(`http://127.0.0.1:5000/voter/${voterID}`);
+                let voter = await voterResponse.json();
+    
+                let votingStatusResponse = await fetch("http://127.0.0.1:5000/voting_status");
+                let votingStatus = await votingStatusResponse.json();
+                let isVotingOpen = votingStatus.isVotingOpen;
+    
+                if (voterResponse.ok) {
                     let tableRow = document.querySelector("table tr:nth-child(2)");
                     tableRow.cells[0].textContent = voter.voterID;
                     tableRow.cells[1].textContent = voter.name;
                     tableRow.cells[2].textContent = voter.birthdate;
                     tableRow.cells[3].textContent = voter.address;
                     tableRow.cells[4].textContent = voter.hasVoted ? "Yes" : "No";
-
-                    if (voter.hasVoted) {
-                        let voteButton = document.getElementById("proceed_voting");
+    
+                    let voteButton = document.getElementById("proceed_voting");
+    
+                    if (voter.hasVoted || !isVotingOpen) {
                         voteButton.disabled = true;  
                         voteButton.style.backgroundColor = "#ccc"; 
                         voteButton.style.cursor = "not-allowed";   
+    
                         voteButton.onclick = function() {
-                            alert("✅ You have already voted! Voting is disabled.");
+                            alert(voter.hasVoted 
+                                ? "✅ You have already voted! Voting is disabled." 
+                                : "⛔ Voting is currently closed!");
                         };
                     }
                 } else {
@@ -82,12 +90,13 @@
                 alert("⚠️ Server error. Please try again later.");
             }
         });
-
+    
         document.getElementById("logout").addEventListener("click", function() {
             sessionStorage.removeItem("voterID");
             window.location.href = "voter.html";
         });
-        </script>
+    </script>
+    
         
 </body>
 </html>
