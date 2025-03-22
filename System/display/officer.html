@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/System/styling/design.css">
+    <title>Officer Panel</title>
+</head>
+<body>
+    <header>
+        <h1>e-BOTO Officer Panel</h1>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container2">
+        <h2>Officer Login</h2>
+        <form id="officerLoginForm">
+            <label for="officerid">Officer ID:</label><br>
+            <input type="text" id="officerid" name="officerid" required><br>
+            <label for="officerpin">PIN:</label><br>
+            <input type="password" id="officerpin" name="officerpin" required><br>
+            <input class="button3" type="submit" value="Login">
+        </form>
+        <p id="loginMessage"></p>
+    </div>
+
+    <button class="backbutton" onclick="window.location.href='index.html'">Back</button>
+
+    <script src="/System/script_files/officer.js"></script>
+</body>
+</html>

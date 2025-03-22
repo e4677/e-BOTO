@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/System/styling/design.css">
+    <title>Display Vote</title>
+</head>
+<body>
+    <header>
+        <h1>e-BOTO Voting Management</h1>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="officer.html">Back to Officer Panel</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container3">
+        <h1>Vote Count</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Candidate</th>
+                <th>Votes</th>
+            </tr>
+        </thead>
+        <tbody id="voteTableBody"></tbody>
+    </table>
+    </div>
+    <button class="backbutton" onclick="history.back()">Back</button>
+    <script src="/System/script_files/vote_count.js"></script>
+</body>
+</html>
